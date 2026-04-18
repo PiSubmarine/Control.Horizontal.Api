@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PiSubmarine/Control/Api/Input/Horizontal.h"
+#include "PiSubmarine/Control/Horizontal/Api/Command.h"
 #include "PiSubmarine/Error/Api/Result.h"
 
 namespace PiSubmarine::Control::Horizontal::Api
@@ -10,7 +10,6 @@ namespace PiSubmarine::Control::Horizontal::Api
     public:
         virtual ~IController() = default;
 
-        [[nodiscard]] virtual Error::Api::Result<void> SetTarget(
-            const Control::Api::Input::Horizontal& target) = 0;
+        [[nodiscard]] virtual Error::Api::Result<void> SetTarget(const Command& target) = 0;
     };
 }

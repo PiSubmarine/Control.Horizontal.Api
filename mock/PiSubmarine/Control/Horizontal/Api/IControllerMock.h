@@ -9,6 +9,6 @@ namespace PiSubmarine::Control::Horizontal::Api
     class IControllerMock : public IController
     {
     public:
-        MOCK_METHOD((Error::Api::Result<void>), SetTarget, (const Control::Api::Input::Horizontal& target), (override));
+        MOCK_METHOD((Error::Api::Result<void>), SetTarget, (const Command& target), (override));
     };
 }

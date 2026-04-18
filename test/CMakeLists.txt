@@ -5,6 +5,7 @@ include(FetchContent)
 project(${PISUBMARINE_MODULE_NAME}.Test LANGUAGES CXX)
 
 set(${PISUBMARINE_MODULE_NAME}.Test.Sources
+        "PiSubmarine/Control/Horizontal/Api/CommandTest.cpp"
         "PiSubmarine/Control/Horizontal/Api/IControllerMockTest.cpp"
         "PiSubmarine/Control/Horizontal/Api/IControllerTest.cpp")
 

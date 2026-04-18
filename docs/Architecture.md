@@ -6,7 +6,7 @@
 
 An `IController` implementation is responsible for:
 
-- accepting a validated horizontal target in the form of `Control::Api::Input::Horizontal`
+- accepting a validated horizontal target in the form of `Control::Horizontal::Api::Command`
 
 The interface is intentionally narrow so that concrete implementations remain free to choose their own strategy, for example:
 
