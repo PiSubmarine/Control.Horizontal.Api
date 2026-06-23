@@ -18,13 +18,6 @@ namespace PiSubmarine::Control::Horizontal::Api
             const double surgeValue = surge;
             const double yawValue = yaw;
 
-            if ((surgeValue * surgeValue) + (yawValue * yawValue) > 1.0)
-            {
-                return std::unexpected(Error::Api::MakeError(
-                    Error::Api::ErrorCondition::ContractError,
-                    make_error_code(ErrorCode::MagnitudeExceeded)));
-            }
-
             return Command(surge, yaw);
         }
 

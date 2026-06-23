@@ -22,9 +22,7 @@ namespace PiSubmarine::Control::Horizontal::Api
             SignedNormalizedFraction(0.80),
             SignedNormalizedFraction(0.80));
 
-        ASSERT_FALSE(result.has_value());
-        EXPECT_EQ(result.error().Condition, Error::Api::ErrorCondition::ContractError);
-        EXPECT_EQ(result.error().Cause, make_error_code(ErrorCode::MagnitudeExceeded));
+        ASSERT_TRUE(result.has_value());
     }
 
     TEST(CommandTest, CreateAcceptsPureForwardCommand)
